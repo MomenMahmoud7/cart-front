@@ -1,12 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'semantic-ui-css/semantic.min.css';
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createLogger } from 'redux-logger'
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { data } from './Data/Reducer';
+import { navBar } from './Components/NavBar/Reducer';
+import { sideBar } from './Components/SideBar/Reducer';
+import { signIn } from './Components/SignIn/Reducer';
+import { signUp } from './Components/SignUp/Reducer';
+import { cart } from './Components/Cart/Reducer';
+import { addProduct } from './Components/Add Product/Reducer';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const logger = createLogger();
+const rootReducer = combineReducers({
+    data,
+    navBar,
+    sideBar,
+    signIn,
+    signUp,
+    cart,
+    addProduct,
+})
+const store = createStore(rootReducer, applyMiddleware(logger));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+    <Provider store={store}>
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
+    </Provider>, document.getElementById('root')
+);

@@ -1,0 +1,11 @@
+@import '../../Styles/flexCard';
+
+.signin-card { 
+    @include flexCard (320px, 24px);
+    margin-left: auto !important;
+    margin-right:  auto !important;
+}
+
+.signin-card-button {
+    margin-top: 8px !important;
+}

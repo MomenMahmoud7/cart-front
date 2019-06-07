@@ -1,0 +1,25 @@
+@import '../../Styles/image';
+@import '../../Styles/flexCard';
+
+.product-items-container {
+    @include flexCard( 100% , 24px);
+
+    .image {
+        width: 30% !important;
+        img{
+            object-fit: contain !important;
+            max-height: 320px !important;
+        }
+    }
+    
+    .description {
+        padding: 24px !important;
+        max-width: 480px !important;
+    }
+
+    .content {
+        min-width: fit-content !important;
+        max-width: 320px;
+        padding: 24px !important;
+    }
+}

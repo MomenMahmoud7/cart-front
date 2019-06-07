@@ -1,0 +1,39 @@
+@import '../../../Styles/colors';
+@import '../../../Styles/barContainer';
+
+.navbar-container {
+    @include barContainer;
+    height: 64px;
+    background-color: $primaryColor !important;
+    .item {
+        background-color: $primaryColor !important;
+    }
+    .image {
+        width: 64px;
+    }
+    .message {
+        text-align: center;
+        background-color: $primaryColor;
+        color: white;
+    }
+}
+.navbar-menu-container {
+    @include barContainer;
+    box-shadow: 0 0 8px 0 $shadowColor !important;
+    background-color: $secondaryColor !important;
+    border-radius: 0 !important;
+    border: none !important;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    margin-top:64px !important;
+    .item {
+        background-color: $secondaryColor !important;
+        font-weight: bolder !important;
+        font-size: 10pt !important;
+    }
+    // .dropdown.item .menu {
+    //     width: 128px !important;
+    //     background-color: $primaryColor !important;
+    // }
+}

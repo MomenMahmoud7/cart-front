@@ -1,0 +1,9 @@
+@import './colors';
+
+@mixin flexCard ($width, $padding){
+    display: flex !important;
+    max-width: $width !important;
+    padding: $padding !important;
+    border-radius: 10px !important;
+    box-shadow: 4px 4px 16px 4px $shadowColor !important;
+}

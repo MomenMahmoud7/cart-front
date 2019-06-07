@@ -1,61 +1,77 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
-import { Button, Form, Message, Icon } from 'semantic-ui-react';
-import { mapStateToProps, mapDispatchToProps } from '../../Connect';
+import { Button, Form, Message, Icon, Card } from 'semantic-ui-react';
+import { mapStateToProps, mapDispatchToProps } from './Connect';
+import './SignIn.scss'
 
 class SignIn extends Component {
-    
+
     render() {
 
-        const { 
+        const {
+            signinEmail,
+            signinEmailError,
+            signinPassword,
+            signinPasswordError,
+            signinError,
             signinEmailOnChange,
             signinPasswordOnChange,
-            signinOnClick,
-            signinEmailError, 
+            keepSignedInOnChange,
+            signin,
         } = this.props;
 
         return (
-            <Form style={{ padding:'24px', width:'360px', marginLeft:'auto', marginRight:'auto' }}>
-                <Form.Input 
-                    error={signinEmailError}
-                    fluid 
-                    icon='user' 
-                    iconPosition='left' 
-                    placeholder='E-mail address'
-                    onChange={signinEmailOnChange}
-                />
-                <Form.Input
-                    icon='lock'
-                    iconPosition='left'
-                    placeholder='Password'
-                    type='password'
-                    onChange={signinPasswordOnChange}
-                />
-                <Form.Checkbox inline label='Keep me signed in.' />
-                    <Button 
-                        icon 
-                        labelPosition='left' 
+            <Card raised fluid className='signin-card' >
+                <Form error={signinError}>
+                    <Form.Input
+                        error={signinEmailError}
+                        fluid
+                        icon='user'
+                        iconPosition='left'
+                        placeholder='E-mail address'
+                        onChange={signinEmailOnChange}
+                    />
+                    <Form.Input
+                        error={signinPasswordError}
+                        icon='lock'
+                        iconPosition='left'
+                        placeholder='Password'
+                        type='password'
+                        onChange={signinPasswordOnChange}
+                    />
+                    <Form.Checkbox inline
+                        label='Keep me signed in'
+                        onChange={keepSignedInOnChange} />
+                    <Button
+                        icon
+                        fluid
+                        labelPosition='left'
                         color='blue'
-                        onClick={signinOnClick}
+                        onClick={() => signin(signinEmail, signinPassword)}
                     >
                         <Icon name='lock' />
                         Sign in
                     </Button>
-                    <Button 
+                    <Button
                         icon
-                        floated='right'
-                        labelPosition='left' 
+                        fluid
+                        labelPosition='left'
                         href='/forget_password'
+                        className='signin-card-button'
                     >
                         <Icon name='redo' />
                         Forget Password
                     </Button>
-                <Message>
-                    New Customer ?&nbsp;&nbsp;&nbsp;
-                    <Link to='/signup'>Create new Account</Link>
-                </Message>
-            </Form>
+                    <Message error >
+                        No account associated to email address
+                    </Message>
+                    <Message>
+                        New Customer ?&nbsp;&nbsp;&nbsp;
+                        <Link to='/signup'>Create new Account</Link>
+                    </Message>
+                </Form>
+            </Card>
         )
     }
 }

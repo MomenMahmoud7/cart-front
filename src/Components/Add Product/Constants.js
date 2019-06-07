@@ -1,1 +1,0 @@
-export const CATGORY_SELECTED = 'CATGORY_SELECTED'

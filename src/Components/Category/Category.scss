@@ -1,0 +1,56 @@
+@import '../../Styles/flexCard';
+@import '../../Styles/colors';
+@import '../../Styles/image';
+
+.item-card {
+    @include flexCard(264px, 0);
+}
+
+.item-card-image {
+    @include image(192px);
+        cursor: pointer;
+}
+
+.item-card-content {
+    a {
+        color: black;
+    }
+    display: inline-block !important;
+    word-wrap: break-word !important;
+    overflow: hidden !important;
+    font-size: 12pt !important;
+    height: 40px !important;
+    line-height: 20px !important; 
+    padding: 0 !important;
+    margin: 16px !important;
+    margin-left: 24px !important;
+    margin-right: 24px !important;
+    border: 0 !important;
+}
+
+.item-card-button{
+    background-color: $primaryColor !important;
+    margin: 0 !important;
+}
+
+.item-modal-container {
+    @include flexCard( 90% , 12px);
+    max-width: 900px ;
+    .content {
+        .image {
+            object-fit: contain !important;
+            display: flex;
+            min-width: 320px;
+            max-height: 320px !important;
+        }
+        .description {
+            padding-left: 24px !important;
+            padding-right: 24px !important;
+            max-width: 320px;
+        }
+        .content {
+            min-width: fit-content !important;
+            max-width: 320px;
+        }        
+    }
+}

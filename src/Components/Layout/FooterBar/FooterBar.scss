@@ -1,0 +1,8 @@
+@import '../../../Styles/colors';
+@import '../../../Styles/barContainer';
+
+.footerbar-container {
+    min-height: 96px;
+    @include barContainer;
+    background-color:$thirdColor !important;
+}

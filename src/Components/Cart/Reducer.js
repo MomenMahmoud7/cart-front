@@ -1,28 +1,14 @@
-import { ADD_ITEM, REMOVE_ITEM } from "./Constants";
+import { FETCH_CART_ITEMS } from "./Actions";
 
-export const cart = (
-    state={
-        cartItems:[],
-    }, action={}) => {
+const initialState = {
+    cartItems: [],
+}
+
+export const cart = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_ITEM :
-            return {...state, 
-                cartItems: 
-                state.cartItems.includes(
-                    (state.cartItems.filter(item => item.id === action.payload.id))[0]
-                )
-                ? state.cartItems.map(item => 
-                    item.id === action.payload.id?
-                    {...item, quantity: ++ item.quantity}:
-                    item    
-                )
-                : state.cartItems.concat({...action.payload, quantity: 1})
-            }
-        case REMOVE_ITEM :
-            return {...state, cartItems: state.cartItems.filter(
-                (item) => item.id !== action.payload.id
-            )};
-        default :
+        case FETCH_CART_ITEMS:
+            return { ...state, cartItems: action.payload };
+        default:
             return state;
     }
 }

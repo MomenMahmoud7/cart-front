@@ -1,0 +1,7 @@
+@import './colors';
+
+@mixin barContainer {
+    margin: 0 !important;
+    padding-left: 10%;
+    padding-right: 10%;
+}

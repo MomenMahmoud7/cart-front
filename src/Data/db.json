@@ -1,90 +1,273 @@
 {
-    "products": [
+  "products": [
+    {
+      "id": 1,
+      "name": "Electronics",
+      "subCat": [
         {
-            "id": "1",
-            "name": "Electronics",
-            "subCat": [
-                {
-                    "id": "Electronics1",
-                    "name": "Mobiles",
-                    "products": [
-                        {
-                            "id": "Mobiles1",
-                            "image": "https://res.cloudinary.com/spectrumobile/image/fetch/e_trim/w_420,h_300,c_fit,f_auto,q_auto,fl_lossy/http%3A%2F%2Fres.cloudinary.com%2Fspectrumobile%2Fimage%2Fupload%2Fv1527810361%2FSpecturm%2520Mobile%2520Buy%2520Flow%2FApple%2FiPhone%2520X%2FMQA62LLA_HERO.png",
-                            "name": "IPhone XS MAX",
-                            "description": "Super Retina in two sizes — including the largest display ever on an iPhone. Even faster Face ID. The smartest, most powerful chip in a smartphone. And a breakthrough dual-camera system with Depth Control. iPhone XS is everything you love about iPhone. Taken to the extreme.",
-                            "price": 27000
-                        },
-                        {
-                            "id": "Mobiles2",
-                            "image": "https://res.cloudinary.com/spectrumobile/image/fetch/e_trim/w_420,h_300,c_fit,f_auto,q_auto,fl_lossy/http%3A%2F%2Fres.cloudinary.com%2Fspectrumobile%2Fimage%2Fupload%2Fv1527810361%2FSpecturm%2520Mobile%2520Buy%2520Flow%2FApple%2FiPhone%2520X%2FMQA62LLA_HERO.png",
-                            "name": "IPhone XS MAX",
-                            "description": "Super Retina in two sizes — including the largest display ever on an iPhone. Even faster Face ID. The smartest, most powerful chip in a smartphone. And a breakthrough dual-camera system with Depth Control. iPhone XS is everything you love about iPhone. Taken to the extreme.",
-                            "price": 27000
-                        },
-                        {
-                            "id": "Mobiles3",
-                            "image": "https://res.cloudinary.com/spectrumobile/image/fetch/e_trim/w_420,h_300,c_fit,f_auto,q_auto,fl_lossy/http%3A%2F%2Fres.cloudinary.com%2Fspectrumobile%2Fimage%2Fupload%2Fv1527810361%2FSpecturm%2520Mobile%2520Buy%2520Flow%2FApple%2FiPhone%2520X%2FMQA62LLA_HERO.png",
-                            "name": "IPhone XS MAX",
-                            "description": "Super Retina in two sizes — including the largest display ever on an iPhone. Even faster Face ID. The smartest, most powerful chip in a smartphone. And a breakthrough dual-camera system with Depth Control. iPhone XS is everything you love about iPhone. Taken to the extreme.",
-                            "price": 27000
-                        }
-                    ]
-                },
-                {
-                    "id": "Electronics2",
-                    "name": "Televesions",
-                    "products": [
-                        {
-                            "id": "Televesions1",
-                            "image": "https://res.cloudinary.com/spectrumobile/image/fetch/e_trim/w_420,h_300,c_fit,f_auto,q_auto,fl_lossy/http%3A%2F%2Fres.cloudinary.com%2Fspectrumobile%2Fimage%2Fupload%2Fv1527810361%2FSpecturm%2520Mobile%2520Buy%2520Flow%2FApple%2FiPhone%2520X%2FMQA62LLA_HERO.png",
-                            "name": "IPhone XS MAX",
-                            "description": "Super Retina in two sizes — including the largest display ever on an iPhone. Even faster Face ID. The smartest, most powerful chip in a smartphone. And a breakthrough dual-camera system with Depth Control. iPhone XS is everything you love about iPhone. Taken to the extreme.",
-                            "price": 27000
-                        },
-                        {
-                            "id": "Televesions2",
-                            "image": "https://res.cloudinary.com/spectrumobile/image/fetch/e_trim/w_420,h_300,c_fit,f_auto,q_auto,fl_lossy/http%3A%2F%2Fres.cloudinary.com%2Fspectrumobile%2Fimage%2Fupload%2Fv1527810361%2FSpecturm%2520Mobile%2520Buy%2520Flow%2FApple%2FiPhone%2520X%2FMQA62LLA_HERO.png",
-                            "name": "IPhone XS MAX",
-                            "description": "Super Retina in two sizes — including the largest display ever on an iPhone. Even faster Face ID. The smartest, most powerful chip in a smartphone. And a breakthrough dual-camera system with Depth Control. iPhone XS is everything you love about iPhone. Taken to the extreme.",
-                            "price": 27000
-                        },
-                        {
-                            "id": "Televesions3",
-                            "image": "https://res.cloudinary.com/spectrumobile/image/fetch/e_trim/w_420,h_300,c_fit,f_auto,q_auto,fl_lossy/http%3A%2F%2Fres.cloudinary.com%2Fspectrumobile%2Fimage%2Fupload%2Fv1527810361%2FSpecturm%2520Mobile%2520Buy%2520Flow%2FApple%2FiPhone%2520X%2FMQA62LLA_HERO.png",
-                            "name": "IPhone XS MAX",
-                            "description": "Super Retina in two sizes — including the largest display ever on an iPhone. Even faster Face ID. The smartest, most powerful chip in a smartphone. And a breakthrough dual-camera system with Depth Control. iPhone XS is everything you love about iPhone. Taken to the extreme.",
-                            "price": 27000
-                        }
-                    ]
-                }
-            ]
+          "id": 11,
+          "name": "Mobiles",
+          "products": [
+            {
+              "id": 111,
+              "image": "https://res.cloudinary.com/spectrumobile/image/fetch/e_trim/w_420,h_300,c_fit,f_auto,q_auto,fl_lossy/http%3A%2F%2Fres.cloudinary.com%2Fspectrumobile%2Fimage%2Fupload%2Fv1527810361%2FSpecturm%2520Mobile%2520Buy%2520Flow%2FApple%2FiPhone%2520X%2FMQA62LLA_HERO.png",
+              "name": "IPhone XS MAX",
+              "description": "Super Retina in two sizes — including the largest display ever on an iPhone. Even faster Face ID. The smartest, most powerful chip in a smartphone.",
+              "price": 27000
+            },
+            {
+              "id": 112,
+              "image": "https://res.cloudinary.com/spectrumobile/image/fetch/e_trim/w_420,h_300,c_fit,f_auto,q_auto,fl_lossy/http%3A%2F%2Fres.cloudinary.com%2Fspectrumobile%2Fimage%2Fupload%2Fv1527810361%2FSpecturm%2520Mobile%2520Buy%2520Flow%2FApple%2FiPhone%2520X%2FMQA62LLA_HERO.png",
+              "name": "IPhone XS MAX",
+              "description": "Super Retina in two sizes — including the largest display ever on an iPhone. Even faster Face ID. The smartest, most powerful chip in a smartphone.",
+              "price": 27000
+            },
+            {
+              "id": 113,
+              "image": "https://res.cloudinary.com/spectrumobile/image/fetch/e_trim/w_420,h_300,c_fit,f_auto,q_auto,fl_lossy/http%3A%2F%2Fres.cloudinary.com%2Fspectrumobile%2Fimage%2Fupload%2Fv1527810361%2FSpecturm%2520Mobile%2520Buy%2520Flow%2FApple%2FiPhone%2520X%2FMQA62LLA_HERO.png",
+              "name": "IPhone XS MAX",
+              "description": "Super Retina in two sizes — including the largest display ever on an iPhone. Even faster Face ID. The smartest, most powerful chip in a smartphone.",
+              "price": 27000
+            }
+          ]
         },
         {
-            "id": "2",
-            "name": "Fashion",
-            "subCat": [
-                {
-                    "id": "Fashion1",
-                    "name": "Men",
-                    "products": []
-                },
-                {
-                    "id": "Fashion2",
-                    "name": "Women",
-                    "products": []
-                },
-                {
-                    "id": "Fashion3",
-                    "name": "Kids",
-                    "products": []
-                },
-                {
-                    "id": "Fashion4",
-                    "name": "Girls",
-                    "products": []
-                }
-            ]
+          "id": 12,
+          "name": "Televesions",
+          "products": [
+            {
+              "id": 121,
+              "image": "https://cf1.s3.souqcdn.com/item/2017/04/10/22/42/88/77/item_XL_22428877_30519207.jpg",
+              "name": "Samsung 65 Inch Ultra HD Smart Curved TV",
+              "description": "Samsung smart curved TV has a 65inch screen with Ultra HD picture resolution.",
+              "price": 57000
+            },
+            {
+              "id": 122,
+              "image": "https://cf1.s3.souqcdn.com/item/2017/04/10/22/42/88/77/item_XL_22428877_30519207.jpg",
+              "name": "Samsung 65 Inch Ultra HD Smart Curved TV",
+              "description": "Samsung smart curved TV has a 65inch screen with Ultra HD picture resolution.",
+              "price": 57000
+            },
+            {
+              "id": 123,
+              "image": "https://cf1.s3.souqcdn.com/item/2017/04/10/22/42/88/77/item_XL_22428877_30519207.jpg",
+              "name": "Samsung 65 Inch Ultra HD Smart Curved TV",
+              "description": "Samsung smart curved TV has a 65inch screen with Ultra HD picture resolution.",
+              "price": 57000
+            },
+            {
+              "id": 124,
+              "image": "https://cf1.s3.souqcdn.com/item/2017/04/10/22/42/88/77/item_XL_22428877_30519207.jpg",
+              "name": "Samsung 65 Inch Ultra HD Smart Curved TV",
+              "description": "Samsung smart curved TV has a 65inch screen with Ultra HD picture resolution.",
+              "price": 57000
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Fashion",
+      "subCat": [
+        {
+          "id": 21,
+          "name": "Men",
+          "products": [
+            {
+              "id": 211,
+              "image": "https://cf2.s3.souqcdn.com/item/2018/09/04/37/77/55/32/item_XXL_37775532_147135970.jpg",
+              "name": "Levi's Pack of 2 Crewneck T-Shirt - White Grey",
+              "description": "Levi's Pack of 2 Crewneck T-Shirt - White Grey",
+              "price": 799
+            },
+            {
+              "id": 212,
+              "image": "https://cf2.s3.souqcdn.com/item/2018/09/04/37/77/55/32/item_XXL_37775532_147135970.jpg",
+              "name": "Levi's Pack of 2 Crewneck T-Shirt - White Grey",
+              "description": "Levi's Pack of 2 Crewneck T-Shirt - White Grey",
+              "price": 799
+            },
+            {
+              "id": 213,
+              "image": "https://cf2.s3.souqcdn.com/item/2018/09/04/37/77/55/32/item_XXL_37775532_147135970.jpg",
+              "name": "Levi's Pack of 2 Crewneck T-Shirt - White Grey",
+              "description": "Levi's Pack of 2 Crewneck T-Shirt - White Grey",
+              "price": 799
+            },
+            {
+              "id": 214,
+              "image": "https://cf2.s3.souqcdn.com/item/2018/09/04/37/77/55/32/item_XXL_37775532_147135970.jpg",
+              "name": "Levi's Pack of 2 Crewneck T-Shirt - White Grey",
+              "description": "Levi's Pack of 2 Crewneck T-Shirt - White Grey",
+              "price": 799
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "Women",
+          "products": [
+            {
+              "id": 221,
+              "image": "https://cf4.s3.souqcdn.com/item/2017/08/16/23/58/33/42/item_XXL_23583342_34509811.jpg",
+              "name": "Jansport Laptop Backpack - Polyester, Vintage Pink",
+              "description": "With its signature suede leather bottom, the JanSport Right Pack is the iconic JanSport classic backpack.",
+              "price": 1569
+            },
+            {
+              "id": 222,
+              "image": "https://cf4.s3.souqcdn.com/item/2017/08/16/23/58/33/42/item_XXL_23583342_34509811.jpg",
+              "name": "Jansport Laptop Backpack - Polyester, Vintage Pink",
+              "description": "With its signature suede leather bottom, the JanSport Right Pack is the iconic JanSport classic backpack.",
+              "price": 1569
+            },
+            {
+              "id": 223,
+              "image": "https://cf4.s3.souqcdn.com/item/2017/08/16/23/58/33/42/item_XXL_23583342_34509811.jpg",
+              "name": "Jansport Laptop Backpack - Polyester, Vintage Pink",
+              "description": "With its signature suede leather bottom, the JanSport Right Pack is the iconic JanSport classic backpack.",
+              "price": 1569
+            },
+            {
+              "id": 224,
+              "image": "https://cf4.s3.souqcdn.com/item/2017/08/16/23/58/33/42/item_XXL_23583342_34509811.jpg",
+              "name": "Jansport Laptop Backpack - Polyester, Vintage Pink",
+              "description": "With its signature suede leather bottom, the JanSport Right Pack is the iconic JanSport classic backpack.",
+              "price": 1569
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "advertisements": [
+    {
+      "id": 1,
+      "image": "https://cms.souqcdn.com/cms/boxes/img/desktop/L_1558880208_HP-MB-Fashion-en.jpg"
+    },
+    {
+      "id": 2,
+      "image": "https://cms.souqcdn.com/cms/boxes/img/desktop/L_1558612074_EG_W_EIDMubarak_MB_TVS_EN.jpg"
+    },
+    {
+      "id": 3,
+      "image": "https://cms.souqcdn.com/cms/boxes/img/desktop/L_1558619165_EG_W_GW_MB_HUAWEIY9PRIME_970x400_EN.jpg"
+    },
+    {
+      "id": 4,
+      "image": "https://cms.souqcdn.com/cms/boxes/img/desktop/L_1558529865_HP_MB_SamsungM10_970x400p-en.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "password": "123456",
+      "phone": "1-770-736-8031 x56442"
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
+      "password": "123456",
+      "phone": "010-692-6593 x09125"
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net",
+      "password": "123456",
+      "phone": "1-463-123-4447"
+    },
+    {
+      "id": 4,
+      "name": "Patricia Lebsack",
+      "username": "Karianne",
+      "email": "Julianne.OConner@kory.org",
+      "password": "123456",
+      "phone": "493-170-9623 x156"
+    },
+    {
+      "id": 5,
+      "name": "Chelsey Dietrich",
+      "username": "Kamren",
+      "email": "Lucio_Hettinger@annie.ca",
+      "password": "123456",
+      "phone": "(254)954-1289"
+    },
+    {
+      "id": 6,
+      "name": "Mrs. Dennis Schulist",
+      "username": "Leopoldo_Corkery",
+      "email": "Karley_Dach@jasper.info",
+      "password": "123456",
+      "phone": "1-477-935-8478 x6430"
+    },
+    {
+      "id": 7,
+      "name": "Kurtis Weissnat",
+      "username": "Elwyn.Skiles",
+      "email": "Telly.Hoeger@billy.biz",
+      "password": "123456",
+      "phone": "210.067.6132"
+    },
+    {
+      "id": 8,
+      "name": "Nicholas Runolfsdottir V",
+      "username": "Maxime_Nienow",
+      "email": "Sherwood@rosamond.me",
+      "password": "123456",
+      "phone": "586.493.6943 x140"
+    },
+    {
+      "id": 9,
+      "name": "Glenna Reichert",
+      "username": "Delphine",
+      "email": "Chaim_McDermott@dana.io",
+      "password": "123456",
+      "phone": "(775)976-6794 x41206"
+    },
+    {
+      "id": 10,
+      "name": "Clementina",
+      "username": "Moriah.Stanton",
+      "email": "Rey.Padberg@karina.biz",
+      "password": "123456",
+      "phone": "024-648-3804"
+    },
+    {
+      "name": "Mo'men",
+      "phone": "00201112402296",
+      "password": "2810",
+      "email": "momenmahmoud7@gmail.com",
+      "address": "116 - El Fostat",
+      "userType": "Buyer",
+      "nationalID": "2810",
+      "cartItems": [
+        {
+          "id": 111,
+          "image": "https://res.cloudinary.com/spectrumobile/image/fetch/e_trim/w_420,h_300,c_fit,f_auto,q_auto,fl_lossy/http%3A%2F%2Fres.cloudinary.com%2Fspectrumobile%2Fimage%2Fupload%2Fv1527810361%2FSpecturm%2520Mobile%2520Buy%2520Flow%2FApple%2FiPhone%2520X%2FMQA62LLA_HERO.png",
+          "name": "IPhone XS MAX",
+          "description": "Super Retina in two sizes — including the largest display ever on an iPhone. Even faster Face ID. The smartest, most powerful chip in a smartphone.",
+          "price": 27000,
+          "quantity": 2
+        },
+        {
+          "id": 121,
+          "image": "https://cf1.s3.souqcdn.com/item/2017/04/10/22/42/88/77/item_XL_22428877_30519207.jpg",
+          "name": "Samsung 65 Inch Ultra HD Smart Curved TV",
+          "description": "Samsung smart curved TV has a 65inch screen with Ultra HD picture resolution.",
+          "price": 57000,
+          "quantity": 4
+        }
+      ],
+      "id": 11
+    }
+  ]
 }

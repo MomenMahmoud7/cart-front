@@ -1,0 +1,23 @@
+@import '../../../Styles/colors';
+
+.sidebar-container {
+    padding-top: 64px !important;
+    background-color: $primaryColor !important;
+    font-size: 10pt !important;
+}
+.sidebar-category {
+    background-color: $secondaryColor;
+    margin:  2px 0  0 !important;
+    padding: 0 !important;
+}
+.sidebar-category :hover {
+    background-color: $secondaryColor !important;
+}
+.sidebar-subcategory {
+    background-color: $primaryColor !important;
+    margin:  2px 0  0 !important;
+    padding: 0 !important;
+}
+.sidebar-subcategory :hover{
+    background-color: $primaryColor !important;
+}

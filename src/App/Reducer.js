@@ -7,7 +7,7 @@ import {
 const initialState = {
     products: [],
     advertisements: [],
-    userData:{},
+    userData: {},
 };
 
 export const data = (state = initialState, action) => {

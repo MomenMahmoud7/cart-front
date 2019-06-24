@@ -40,7 +40,6 @@ export const mapDispatchToProps = dispatch => {
                             address,
                             userType,
                             nationalID,
-                            image,
                             cartItems,
                         } = user[0]
                         dispatch(fetchCartItems(cartItems));
@@ -52,9 +51,8 @@ export const mapDispatchToProps = dispatch => {
                             userType,
                             nationalID,
                         ));
-                    }
-                    )
+                    })
         },
-        showCategory: (category) => dispatch(showCategory(category)),
+        showCategory: category => dispatch(showCategory(category)),
     }
 }

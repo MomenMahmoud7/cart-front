@@ -34,7 +34,7 @@ class Cart extends Component {
             removeItem,
             changeItemQuantity
         } = this.props
-        
+
         if (localStorage.user)
             if (cartItems.length === 0)
                 return (
@@ -92,7 +92,12 @@ class Cart extends Component {
                             <Card.Content className='cart-check-content'>
                                 <Card.Header content='Total' />
                                 <Statistic>
-                                    <Statistic.Value>{cartItems.map(item => item.price * item.quantity).reduce(add, 0)}</Statistic.Value>
+                                    <Statistic.Value>
+                                        {cartItems.map(item =>
+                                            item.price * item.quantity
+                                        ).reduce(add, 0)
+                                        }
+                                    </Statistic.Value>
                                     <Statistic.Label>EGP</Statistic.Label>
                                 </Statistic>
                             </Card.Content>

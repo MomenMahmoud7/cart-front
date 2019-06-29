@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import 'semantic-ui-css/semantic.min.css';
 import App from './App/App';
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -22,20 +22,22 @@ const rootReducer = combineReducers({
     signUp,
     cart,
     addProduct,
-    category,
-})
+    category
+});
 const store = createStore(
-    rootReducer, 
+    rootReducer,
     compose(
-        applyMiddleware(thunk), 
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-        )
-    );
+        applyMiddleware(thunk),
+        window.__REDUX_DEVTOOLS_EXTENSION__ &&
+            window.__REDUX_DEVTOOLS_EXTENSION__()
+    )
+);
 
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
-            <App/>
+            <App />
         </BrowserRouter>
-    </Provider>, document.getElementById('root')
+    </Provider>,
+    document.getElementById('root')
 );

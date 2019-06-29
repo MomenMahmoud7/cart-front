@@ -1,6 +1,4 @@
-import {
-    FETCH_ADVERTISEMENTS,
-} from './Actions';
+import { FETCH_ADVERTISEMENTS } from './Actions';
 
 const initialState = {
     advertisements: []
@@ -13,4 +11,4 @@ export const home = (state = initialState, action) => {
         default:
             return state;
     }
-}
+};

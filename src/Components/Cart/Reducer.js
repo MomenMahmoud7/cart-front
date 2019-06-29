@@ -1,8 +1,8 @@
-import { FETCH_CART_ITEMS } from "./Actions";
+import { FETCH_CART_ITEMS } from './Actions';
 
 const initialState = {
-    cartItems: [],
-}
+    cartItems: []
+};
 
 export const cart = (state = initialState, action) => {
     switch (action.type) {
@@ -11,4 +11,4 @@ export const cart = (state = initialState, action) => {
         default:
             return state;
     }
-}
+};

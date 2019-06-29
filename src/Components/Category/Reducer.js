@@ -1,7 +1,7 @@
 import { ITEM_ADDED } from './Actions';
 
 const initialState = {
-    itemStatus: false,
+    itemStatus: false
 };
 
 export const category = (state = initialState, action) => {
@@ -11,4 +11,4 @@ export const category = (state = initialState, action) => {
         default:
             return state;
     }
-}
+};

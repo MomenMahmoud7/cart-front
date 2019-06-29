@@ -1,6 +1,6 @@
 @import './colors';
 
-@mixin flexCard ($width, $padding){
+@mixin flexCard($width, $padding) {
     display: flex !important;
     max-width: $width !important;
     padding: $padding !important;

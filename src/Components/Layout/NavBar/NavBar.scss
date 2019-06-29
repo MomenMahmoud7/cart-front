@@ -26,14 +26,10 @@
     position: fixed;
     width: 100%;
     z-index: 2;
-    margin-top:64px !important;
+    margin-top: 64px !important;
     .item {
         background-color: $secondaryColor !important;
         font-weight: bolder !important;
         font-size: 10pt !important;
     }
-    // .dropdown.item .menu {
-    //     width: 128px !important;
-    //     background-color: $primaryColor !important;
-    // }
 }

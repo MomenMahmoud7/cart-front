@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Button, Form, Message, Icon, Card } from 'semantic-ui-react';
 import { mapStateToProps, mapDispatchToProps } from './Connect';
-import './SignIn.scss'
+import './SignIn.scss';
 
 class SignIn extends Component {
-
     render() {
-
         const {
             signinEmail,
             signinEmailError,
@@ -18,11 +16,11 @@ class SignIn extends Component {
             signinEmailOnChange,
             signinPasswordOnChange,
             keepSignedInOnChange,
-            signin,
+            signin
         } = this.props;
 
         return (
-            <Card raised fluid className='signin-card' >
+            <Card raised fluid className='signin-card'>
                 <Form error={signinError}>
                     <Form.Input
                         error={signinEmailError}
@@ -40,9 +38,11 @@ class SignIn extends Component {
                         type='password'
                         onChange={signinPasswordOnChange}
                     />
-                    <Form.Checkbox inline
+                    <Form.Checkbox
+                        inline
                         label='Keep me signed in'
-                        onChange={keepSignedInOnChange} />
+                        onChange={keepSignedInOnChange}
+                    />
                     <Button
                         icon
                         fluid
@@ -63,7 +63,7 @@ class SignIn extends Component {
                         <Icon name='redo' />
                         Forget Password
                     </Button>
-                    <Message error >
+                    <Message error>
                         No account associated to email address
                     </Message>
                     <Message>
@@ -72,7 +72,10 @@ class SignIn extends Component {
                     </Message>
                 </Form>
             </Card>
-        )
+        );
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(SignIn);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(SignIn);

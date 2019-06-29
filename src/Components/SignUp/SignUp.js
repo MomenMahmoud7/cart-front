@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Button, Form, Message, Select, Card } from 'semantic-ui-react';
 import { mapStateToProps, mapDispatchToProps } from './Connect';
-import './SignUp.scss'
+import './SignUp.scss';
 
 class SignUp extends Component {
-
     render() {
         const {
             signupName,
@@ -36,8 +35,8 @@ class SignUp extends Component {
             signupUserTypeOnChange,
             signupNationalIdOnChange,
             signupTermsOnChange,
-            signupOnClick,
-        } = this.props
+            signupOnClick
+        } = this.props;
 
         return (
             <Card raised fluid className='signup-card'>
@@ -88,10 +87,12 @@ class SignUp extends Component {
                             control={Select}
                             options={[
                                 { key: 'b', text: 'Buyer', value: 'Buyer' },
-                                { key: 's', text: 'Seller', value: 'Seller' },
+                                { key: 's', text: 'Seller', value: 'Seller' }
                             ]}
                             label='Buyer/Seller'
-                            onChange={(event, data) => signupUserTypeOnChange(data.value)}
+                            onChange={(event, data) =>
+                                signupUserTypeOnChange(data.value)
+                            }
                         />
                         <Form.Input
                             error={signupNationalIdError}
@@ -129,21 +130,24 @@ class SignUp extends Component {
                         labelPosition='right'
                         color='blue'
                         content='Create account'
-                        onClick={() => signupOnClick(
-                            signupName,
-                            signupPhone,
-                            signupPassword,
-                            signupConfirmPassword,
-                            signupEmail,
-                            signupAddress,
-                            signupUserType,
-                            signupNationalId,
-                            signupTerms,
-                            signupError,
-                        )}
+                        onClick={() =>
+                            signupOnClick(
+                                signupName,
+                                signupPhone,
+                                signupPassword,
+                                signupConfirmPassword,
+                                signupEmail,
+                                signupAddress,
+                                signupUserType,
+                                signupNationalId,
+                                signupTerms,
+                                signupError
+                            )
+                        }
                     />
-                    <Message error >
-                        You can only sign up for an account once with a given e-mail address.
+                    <Message error>
+                        You can only sign up for an account once with a given
+                        e-mail address.
                     </Message>
                     <Message>
                         Already have an account ? &nbsp;&nbsp;&nbsp;
@@ -154,4 +158,7 @@ class SignUp extends Component {
         );
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(SignUp);

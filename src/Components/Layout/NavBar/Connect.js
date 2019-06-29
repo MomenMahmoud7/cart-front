@@ -8,9 +8,9 @@ export const mapStateToProps = state => {
         signedIn: state.signIn.signedIn,
         sidebarCollapsed: state.sideBar.sidebarCollapsed,
         cartItems: state.cart.cartItems,
-        itemStatus: state.category.itemStatus,
-    }
-}
+        itemStatus: state.category.itemStatus
+    };
+};
 
 export const mapDispatchToProps = dispatch => {
     return {
@@ -19,6 +19,6 @@ export const mapDispatchToProps = dispatch => {
             dispatch(setUserStatus(false));
             localStorage.removeItem('user');
             dispatch(fetchCartItems([]));
-        },
-    }
-}
+        }
+    };
+};

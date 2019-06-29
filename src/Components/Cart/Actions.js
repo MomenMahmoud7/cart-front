@@ -6,4 +6,4 @@ export const CHANGE_ITEM_QUANTITY = 'CHANGE_ITEM_QUANTITY';
 export const fetchCartItems = cartItems => ({
     type: FETCH_CART_ITEMS,
     payload: cartItems
-})
+});

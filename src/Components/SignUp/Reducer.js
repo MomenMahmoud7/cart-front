@@ -39,9 +39,8 @@ const initialState = {
     signupNationalIdError: false,
     signupTermsError: false,
     signupError: false,
-    signedUp: false,
-}
-
+    signedUp: false
+};
 
 export const signUp = (state = initialState, action) => {
     switch (action.type) {
@@ -86,4 +85,4 @@ export const signUp = (state = initialState, action) => {
         default:
             return state;
     }
-}
+};

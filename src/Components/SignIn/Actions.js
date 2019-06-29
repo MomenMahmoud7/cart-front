@@ -9,31 +9,31 @@ export const USER_STATUS = 'USER_STATUS';
 export const signinEmailOnChange = text => ({
     type: SIGNIN_EMAIL,
     payload: text
-})
+});
 
 export const signinEmailErrorHandler = () => ({
-    type: SIGNIN_EMAIL_ERROR,
-})
+    type: SIGNIN_EMAIL_ERROR
+});
 
 export const signinPasswordOnChange = text => ({
     type: SIGNIN_PASSWORD,
     payload: text
-})
+});
 
 export const signinPasswordErrorHandler = text => ({
     type: SIGNIN_PASSWORD_ERROR,
     payload: text
-})
+});
 
 export const keepSignedInOnChange = () => ({
-    type: KEEP_SIGNED_IN,
-})
+    type: KEEP_SIGNED_IN
+});
 
 export const signinErrorHandler = text => ({
     type: SIGNIN_ERROR,
     payload: text
-})
+});
 export const setUserStatus = status => ({
     type: USER_STATUS,
     payload: status
-})
+});

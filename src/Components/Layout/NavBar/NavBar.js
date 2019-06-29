@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { mapStateToProps, mapDispatchToProps } from './Connect';
-import { Menu, Dropdown, Responsive, Button, Message, Image, Icon, Transition, Label, Popup } from 'semantic-ui-react';
+import {
+    Menu,
+    Dropdown,
+    Responsive,
+    Button,
+    Message,
+    Image,
+    Icon,
+    Transition,
+    Label,
+    Popup
+} from 'semantic-ui-react';
 import logo from '../../../logo.svg';
 import './NavBar.scss';
 
-
 class Navbar extends Component {
-
     render() {
-
         const {
             products,
             signedIn,
@@ -18,7 +26,7 @@ class Navbar extends Component {
             showSidebar,
             sidebarCollapsed,
             cartItems,
-            itemStatus,
+            itemStatus
         } = this.props;
 
         const dropSignIn = (
@@ -33,16 +41,24 @@ class Navbar extends Component {
                     </Message>
                 </Dropdown.Item>
             </div>
-        )
+        );
 
         const dropSignedIn = (
             <div>
-                <Dropdown.Item as={Link} to='/user'>My Orders</Dropdown.Item>
-                <Dropdown.Item as={Link} to='/user'>My Addresses</Dropdown.Item>
-                <Dropdown.Item as={Link} to='/user'>Account Settings</Dropdown.Item>
-                <Dropdown.Item as={Link} to='/home' onClick={signOut}>Sign Out</Dropdown.Item>
+                <Dropdown.Item as={Link} to='/user'>
+                    My Orders
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} to='/user'>
+                    My Addresses
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} to='/user'>
+                    Account Settings
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} to='/home' onClick={signOut}>
+                    Sign Out
+                </Dropdown.Item>
             </div>
-        )
+        );
 
         return (
             <div>
@@ -70,24 +86,36 @@ class Navbar extends Component {
                                 {signedIn ? dropSignedIn : dropSignIn}
                             </Dropdown.Menu>
                         </Dropdown>
-                        <Popup open={itemStatus} position='bottom center' basic trigger={
-                            <Menu.Item as={Link} to='/cart'>
-                                <Icon name='cart' />
-                                <Label color='red' >
-                                    {cartItems.reduce((prev, cur) => prev + cur.quantity, 0)}
-                                </Label>
-                            </Menu.Item>
-                        }>
-                            Item Added to Cart <br/>
+                        <Popup
+                            open={itemStatus}
+                            position='bottom center'
+                            basic
+                            trigger={
+                                <Menu.Item as={Link} to='/cart'>
+                                    <Icon name='cart' />
+                                    <Label color='red'>
+                                        {cartItems.reduce(
+                                            (prev, cur) => prev + cur.quantity,
+                                            0
+                                        )}
+                                    </Label>
+                                </Menu.Item>
+                            }
+                        >
+                            Item Added to Cart <br />
                             <Link to='/cart'>Check your Cart</Link>
                         </Popup>
                     </Menu.Menu>
                 </Menu>
                 <Transition.Group animation={'slide down'} duration={500}>
-                    {!sidebarCollapsed &&
+                    {!sidebarCollapsed && (
                         <Responsive minWidth='480'>
-                            <Menu borderless inverted className='navbar-menu-container'>
-                                {products.map((category) =>
+                            <Menu
+                                borderless
+                                inverted
+                                className='navbar-menu-container'
+                            >
+                                {products.map(category => (
                                     <Dropdown
                                         key={category.id}
                                         item
@@ -96,28 +124,37 @@ class Navbar extends Component {
                                         closeOnChange
                                         direction='right'
                                     >
-                                        <Dropdown.Menu >
+                                        <Dropdown.Menu>
                                             <div>
-                                                {category.subCat.map((subCategory) =>
-                                                    <Dropdown.Item
-                                                        as={Link}
-                                                        to={`/${category.name}/${subCategory.name}`}
-                                                        key={subCategory.id}
-                                                    >
-                                                        {subCategory.name}
-                                                    </Dropdown.Item>
+                                                {category.subCat.map(
+                                                    subCategory => (
+                                                        <Dropdown.Item
+                                                            as={Link}
+                                                            to={`/${
+                                                                category.name
+                                                            }/${
+                                                                subCategory.name
+                                                            }`}
+                                                            key={subCategory.id}
+                                                        >
+                                                            {subCategory.name}
+                                                        </Dropdown.Item>
+                                                    )
                                                 )}
                                             </div>
                                         </Dropdown.Menu>
                                     </Dropdown>
-                                )}
+                                ))}
                             </Menu>
                         </Responsive>
-                    }
+                    )}
                 </Transition.Group>
             </div>
         );
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Navbar);

@@ -7,7 +7,7 @@ import {
     signinPasswordErrorHandler,
     keepSignedInOnChange,
     signinErrorHandler,
-    setUserStatus,
+    setUserStatus
 } from './Actions';
 
 export const mapStateToProps = state => {
@@ -17,14 +17,16 @@ export const mapStateToProps = state => {
         signinPassword: state.signIn.signinPassword,
         signinPasswordError: state.signIn.signinPasswordError,
         keepSignedIn: state.signIn.keepMeSignedIn,
-        signinError: state.signIn.signinError,
-    }
-}
+        signinError: state.signIn.signinError
+    };
+};
 
 export const mapDispatchToProps = dispatch => {
     return {
-        signinEmailOnChange: event => dispatch(signinEmailOnChange(event.target.value)),
-        signinPasswordOnChange: event => dispatch(signinPasswordOnChange(event.target.value)),
+        signinEmailOnChange: event =>
+            dispatch(signinEmailOnChange(event.target.value)),
+        signinPasswordOnChange: event =>
+            dispatch(signinPasswordOnChange(event.target.value)),
         keepSignedInOnChange: () => dispatch(keepSignedInOnChange()),
         signin: (signinEmail, signinPassword) => {
             dispatch(signinEmailErrorHandler());
@@ -44,27 +46,27 @@ export const mapDispatchToProps = dispatch => {
                                     nationalID,
                                     image,
                                     cartItems,
-                                    id,
-                                } = user[0]
+                                    id
+                                } = user[0];
                                 dispatch(fetchCartItems(cartItems));
-                                dispatch(fetchUserData(
-                                    name,
-                                    phone,
-                                    email,
-                                    address,
-                                    userType,
-                                    nationalID,
-                                    image,
-                                ));
+                                dispatch(
+                                    fetchUserData(
+                                        name,
+                                        phone,
+                                        email,
+                                        address,
+                                        userType,
+                                        nationalID,
+                                        image
+                                    )
+                                );
                                 dispatch(signinPasswordErrorHandler(false));
                                 dispatch(setUserStatus(true));
                                 localStorage.setItem('user', id);
-                            }
-                            else dispatch(signinPasswordErrorHandler(true))
-                        }
-                        else dispatch(signinErrorHandler(true));
-                    })
+                            } else dispatch(signinPasswordErrorHandler(true));
+                        } else dispatch(signinErrorHandler(true));
+                    });
             }
-        },
-    }
-}
+        }
+    };
+};

@@ -8,7 +8,7 @@
 
 .item-card-image {
     @include image(192px);
-        cursor: pointer;
+    cursor: pointer;
 }
 
 .item-card-content {
@@ -20,7 +20,7 @@
     overflow: hidden !important;
     font-size: 12pt !important;
     height: 40px !important;
-    line-height: 20px !important; 
+    line-height: 20px !important;
     padding: 0 !important;
     margin: 16px !important;
     margin-left: 24px !important;
@@ -28,14 +28,14 @@
     border: 0 !important;
 }
 
-.item-card-button{
+.item-card-button {
     background-color: $primaryColor !important;
     margin: 0 !important;
 }
 
 .item-modal-container {
-    @include flexCard( 90% , 12px);
-    max-width: 900px ;
+    @include flexCard(90%, 12px);
+    max-width: 900px;
     .content {
         .image {
             object-fit: contain !important;
@@ -51,6 +51,6 @@
         .content {
             min-width: fit-content !important;
             max-width: 320px;
-        }        
+        }
     }
 }

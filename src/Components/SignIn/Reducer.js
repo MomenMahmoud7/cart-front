@@ -5,7 +5,7 @@ import {
     SIGNIN_PASSWORD_ERROR,
     KEEP_SIGNED_IN,
     SIGNIN_ERROR,
-    USER_STATUS,
+    USER_STATUS
 } from './Actions';
 
 const initialState = {
@@ -15,8 +15,8 @@ const initialState = {
     signinPasswordError: false,
     keepSignedIn: false,
     signinError: false,
-    signedIn: false,
-}
+    signedIn: false
+};
 
 const mailFormat = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
 
@@ -25,7 +25,12 @@ export const signIn = (state = initialState, action) => {
         case SIGNIN_EMAIL:
             return { ...state, signinEmail: action.payload };
         case SIGNIN_EMAIL_ERROR:
-            return { ...state, signinEmailError: mailFormat.test(state.signinEmail) ? false : true };
+            return {
+                ...state,
+                signinEmailError: mailFormat.test(state.signinEmail)
+                    ? false
+                    : true
+            };
         case SIGNIN_PASSWORD:
             return { ...state, signinPassword: action.payload };
         case SIGNIN_PASSWORD_ERROR:
@@ -39,4 +44,4 @@ export const signIn = (state = initialState, action) => {
         default:
             return state;
     }
-}
+};
